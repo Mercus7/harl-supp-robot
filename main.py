@@ -85,7 +85,7 @@ async def hfandler(message: types.Message, state: FSMContext):
 	result = q.fetchone()
 	if result[0] == 0:
 		if message.chat.id == admin:
-			await message.answer('<b>💁‍♂️ Введите id пользователя, которого нужно заблокировать:</b>', reply_markup=kb.back, parse_mode='HTML')
+			await message.answer('<b>💁‍♂️ Введите id пользователя, которого нужно разблокировать:</b>', reply_markup=kb.back, parse_mode='HTML')
 			await st.item4.set()
 
 @dp.message_handler(content_types=['text'], text='📧Рассылка')
